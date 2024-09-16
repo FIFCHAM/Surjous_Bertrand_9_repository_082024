@@ -23,10 +23,10 @@ const Slider = () => {
   return (
     <div className="SlideCardList">
       {byDateDesc?.map((event, idx) => (
-        <>
+        <div key={event.title}>
 
           <div
-            key={event.id}
+            
             className={`SlideCard SlideCard--${index === idx ? "display" : "hide"
               }`}
           >
@@ -41,7 +41,7 @@ const Slider = () => {
           </div>
           <div className="SlideCard__paginationContainer">
               {datafoCus?.map((evt, idex) => (
-                <div key={evt.id} className="SlideCard__pagination">
+                <div key={evt.title} className="SlideCard__pagination">
               
                 
                 <input 
@@ -54,7 +54,7 @@ const Slider = () => {
             </div>
               ))}
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
